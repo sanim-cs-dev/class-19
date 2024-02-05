@@ -1,0 +1,134 @@
+:root {
+    --background-color: #333;
+    --text-color: #eee;
+    --button-background-colour: black;
+    --button-colour:white;
+
+}
+:root.dark {
+    --background-color: #eee;
+    --text-color: #333;
+    --button-background-colour: white;
+    --button-colour:black;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px ;
+    
+}
+
+#digital_clock {
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;   
+    justify-content: center;
+    margin: 30px 0px 100px;
+    
+    
+}
+
+.clock{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;   
+    justify-content: center;
+    padding: 20px 20px;
+    border: 2px solid var(--text-color); 
+    border-radius: 20px;
+}
+
+button{
+    padding: 20px 30PX;
+    font-size: 50px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    cursor: pointer;
+    background-color: rgba(229, 233, 20, 0.273);
+    color: var(--button-colour);
+}
+
+
+
+#analogClock{
+    background-color: var(--backgroundColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+#analogClock .container{
+    position: relative;
+}
+
+#analogClock .clock{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color:var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--tittle-color);
+}
+#analogClock .clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 15px;
+    text-align: center;
+}
+ #analogClock .clock span b{
+    font-size: 30px;
+    font-weight: 800px;
+    transform: rotate(calc(-30deg * var(--i)));
+    display: block;
+    color:var(--textColor) ;
+}
+#analogClock .clock::before{
+    content: '';
+    position: absolute;
+    width: 10px ;
+    height: 10px;
+    background-color: var(--textColor);
+    border-radius: 50%;
+    z-index: 2;
+}
+#analogClock .clock .hand{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#analogClock .clock i{
+    width: 8px;
+    height: var(--hight);
+    background-color: var(--color);
+    position: absolute;
+    border-radius: 10px;
+}
